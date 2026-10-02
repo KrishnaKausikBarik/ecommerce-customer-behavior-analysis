@@ -26,7 +26,7 @@ The analysis uses fields such as:
 | 4 | Which city generates the most revenue? | **Istanbul — 5,646,595.78** |
 | 5 | Which age group generates the most revenue? | **26–35 — 6,623,009.07** |
 | 6 | Which product category has the highest average customer rating? | **Home & Garden — 3.93** |
-| 7 | Which product category has the highest average quantity per order? | **Sports — 3.05** |
+| 7 | Which product category has the highest quantity per order? | **Sports** |
 
 ## Excel Analysis
 The analysis was performed using Excel functions including:
