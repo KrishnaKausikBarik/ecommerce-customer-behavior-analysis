@@ -50,19 +50,21 @@ FROM (
             WHEN TRY_CONVERT(INT, Age) BETWEEN 18 AND 25 THEN '18-25'
             WHEN TRY_CONVERT(INT, Age) BETWEEN 26 AND 35 THEN '26-35'
             WHEN TRY_CONVERT(INT, Age) BETWEEN 36 AND 45 THEN '36-45'
-            ELSE '46+'
+            WHEN TRY_CONVERT(INT, Age) BETWEEN 46 AND 55 THEN '46-55'
+            WHEN TRY_CONVERT(INT, Age) >= 56 THEN '56+'
+            ELSE 'Other'
         END AS Age_Group,
-        TRY_CONVERT(DECIMAL(12,2), Total_Amount) AS Total_Revenue
+        TRY_CONVERT(DECIMAL(12, 2), Total_Amount) AS Total_Revenue
     FROM [dbo].[ecommerce_customer_behavior_dataset_v2]
 ) AS data
 GROUP BY Age_Group
 ORDER BY Revenue DESC;
 
-SELECT DISTINCT
-Product_Category,
-AVG(TRY_CONVERT(DECIMAL(10,2),Customer_Rating))
-OVER (PARTITION BY Product_Category) AS Average_Rating
-FROM [dbo].[ecommerce_customer_behavior_dataset_v2]
+SELECT Product_Category,
+       AVG(CAST(Customer_Rating AS DECIMAL(10,2))) AS Avg_Rating
+FROM dbo.ecommerce_customer_behavior_dataset_v2
+GROUP BY Product_Category
+ORDER BY Avg_Rating DESC;
 
 SELECT DISTINCT TOP 1
     Product_Category,
@@ -71,12 +73,11 @@ SELECT DISTINCT TOP 1
 FROM [dbo].[ecommerce_customer_behavior_dataset_v2]
 ORDER BY Average_Rating DESC;
 
-SELECT DISTINCT TOP 1
-    Product_Category,
-    SUM(TRY_CONVERT(INT, Quantity))
-        OVER (PARTITION BY Product_Category) AS Average_Quantity
-FROM [dbo].[ecommerce_customer_behavior_dataset_v2]
-ORDER BY Average_Quantity DESC;
+SELECT Product_Category,
+       AVG(CAST(Customer_Rating AS DECIMAL(10,2))) AS Avg_Rating
+FROM dbo.ecommerce_customer_behavior_dataset_v2
+GROUP BY Product_Category
+ORDER BY Avg_Rating DESC;
 
 
 
