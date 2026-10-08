@@ -23,7 +23,7 @@ Key fields analyzed:
 | # | Business Question | Finding |
 |---|---|---|
 | 1 | Which product category generates the most revenue? | **Electronics — $10,481,897.65** |
-| 2 | Do returning customers spend more than new customers? | **No — Average order value is virtually identical ($1,276.06 vs. $1,287.73)**.<br>Returning customers account for **88.1% of total revenue ($19,190,720.46 vs. $2,588,332.13)** entirely due to order volume (**15,039 vs. 2,010 orders**), not larger basket sizes. |
+| 2 | Do returning customers spend more than new customers? | **No — Average order value is virtually identical ($1,276.06 vs. $1,287.73)**.<br>Returning customers account for more total revenue ($19,190,720.46 vs. $2,588,332.13) solely due to order volume (**15,039 vs. 2,010 orders**), not larger basket sizes. |
 | 3 | Which payment method generates the most revenue? | **Credit Card — $9,069,147.65** |
 | 4 | Which city generates the most revenue? | **Istanbul — $5,646,595.78** |
 | 5 | Which age group generates the most revenue? | **26–35 — $6,623,009.07** |
@@ -36,14 +36,14 @@ Key fields analyzed:
 
 A common pitfall in revenue analysis is conflating **aggregate totals** with **customer purchasing behavior**:
 
-| Customer Type | Orders | Total Revenue | Revenue Share | Avg Order Value (AOV) |
-|---|---|---|---|---|
-| **Returning** | 15,039 | $19,190,720.46 | 88.1% | $1,276.06 |
-| **New** | 2,010 | $2,588,332.13 | 11.9% | $1,287.73 |
+| Customer Type | Orders | Total Revenue | Avg Order Value (AOV) |
+|---|---|---|---|
+| **Returning** | 15,039 | $19,190,720.46 | $1,276.06 |
+| **New** | 2,010 | $2,588,332.13 | $1,287.73 |
 
 ### Core Insight:
 - First-time and repeat buyers spend nearly the exact same amount per transaction (~$1,280).
-- Repeat transactions generate nearly 9 out of every 10 revenue dollars.
+- Repeat transactions generate the overwhelming majority of total revenue due to transaction volume.
 - **Strategic Implication:** Growth is driven by retention and purchase frequency rather than upselling larger basket sizes.
 
 ---
@@ -67,11 +67,11 @@ A common pitfall in revenue analysis is conflating **aggregate totals** with **c
 ---
 
 ## Key Takeaways
-1. **Retention Powers Revenue:** 88% of gross sales stem from repeat buyers, proving customer retention is the business's core growth engine.
+1. **Retention Powers Revenue:** Repeat orders drive total business volume, proving customer retention is the core growth engine.
 2. **Basket Sizes Are Flat Across Segments:** AOV does not expand with customer familiarity ($1,276 for returning vs. $1,288 for new).
 3. **Core Driver Category:** Electronics is the dominant revenue engine ($10.48M).
 4. **Primary Market & Channel:** Istanbul ($5.65M) and Credit Card payments ($9.07M) represent the largest geographic and financial channels.
-5. **Key Demographic:** The 26–35 age bracket produces the highest revenue share ($6.62M).
+5. **Key Demographic:** The 26–35 age bracket produces the highest revenue ($6.62M).
 
 ---
 
